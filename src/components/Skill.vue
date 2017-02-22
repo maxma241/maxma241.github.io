@@ -1,11 +1,11 @@
 <template>
     <div>
         <md-list>
-        <md-list-item v-for="s in skills">
+        <md-list-item v-for="(s,i) in skills">
             <div class="list-height">
                 {{s.name}}
                 <div class="skill-bar-wrap">
-                    <div class="skill-bar" :style="{width:s.value +'%'}"></div>
+                    <div class="skill-bar" :style="{width:`${s.value}%`, background: `rgb(${100-s.value+15}%, ${s.value+10}%, 0%)`}"></div>
                 </div>
             </div>
         </md-list-item>
@@ -17,8 +17,20 @@
 <script>
     export default {
         props:['skills'],
-        computed:{
-            cssskills(){}
+        methods:{
+            // cssskills(i){
+            //     let bar = "skill-bar";
+            //     return bar;
+            //     let sValue = this.skills[i].value;
+            //     if (sValue >= 80) {
+            //         return bar + " skill-bar-80";
+            //     } else if (sValue >= 60) {
+            //         return bar + " skill-bar-60";
+            //     } else if (sValue >= 40) {
+            //         return bar + " skill-bar-40";
+            //     }
+            //     return bar + " skill-bar-20";
+            // }
         }
     }
 </script>
@@ -34,7 +46,6 @@
             border-radius: 25px;
             .skill-bar {
                 height: 15px;
-                background: #00796b;
                 border-radius: 25px 0 0 25px;
             }
         }
