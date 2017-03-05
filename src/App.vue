@@ -1,24 +1,12 @@
 <template>
   <div id="app">
-    <!--<div class="col-md-3">
-      <md-sidenav>
-      <md-whiteframe md-elevation="6">
+      <md-sidenav class="md-left md-fixed" ref="sidenav">
         <left-list :introduce="data.introduce" >
           <skill :skills="data.skills" />
         </left-list>
-      </md-whiteframe>
       </md-sidenav>
-    </div>
-    <div class="col-md-9">
-      <md-card>
-        <md-card-header>
-          <h2>BackGround</h2>
-        </md-card-header>
-        <about :about="data.introduce.about" />
-      </md-card>
-    </div> -->
-      <div>
-        <md-toolbar>
+      <div class="page-content">
+        <md-toolbar class="main-header">
           <md-button class="md-icon-button nav-show" @click.native="toggleSidenav">
             <md-icon>menu</md-icon>
           </md-button>
@@ -26,13 +14,6 @@
             Max Ma Resume
           </h1>
         </md-toolbar>
-
-        <md-sidenav class="md-left" ref="sidenav">
-          <left-list :introduce="data.introduce" >
-            <skill :skills="data.skills" />
-          </left-list>
-        </md-sidenav>
-     
         <md-card class="nav-margin">
           <md-card-header>
             <h3>BackGround</h3>
@@ -114,14 +95,21 @@ a {
     display: flex;
     flex-flow: column;
 }
+.main-header {
+    z-index: 2;
+}
+.page-content {
+    z-index: 1;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 
 .md-list-item .md-list-item-container {
     min-height: 38px;
     justify-content: flex-end;
-}
-
-.head-layout {
-  width: 350px;
 }
 
 .md-sidenav.md-left .md-sidenav-content {
@@ -131,13 +119,15 @@ a {
     display: block;
 }
 .nav-margin {
-  margin: 5px 10px;
+  margin-top: 5px;
+  margin-left: 10px;
 }
 
 @media (min-width:  992px) {
   .md-sidenav.md-left .md-sidenav-content {
     top: 0;
     pointer-events: auto;
+    box-shadow: 0 1px 5px rgba(0,0,0,.2), 0 2px 2px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12);
     transform: translate3D(0,0,0);
   }
   .nav-margin {

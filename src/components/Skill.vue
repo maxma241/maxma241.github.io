@@ -37,7 +37,7 @@
     .md-list-item-container  {
         .skill-bar-wrap {
             height: 15px;
-            width: 100px;
+            width: 90px;
             min-height: 2px;
             background: black;
             display: inline-block;
@@ -49,7 +49,7 @@
         }
     }
     .span-margin {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 </style>
