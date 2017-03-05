@@ -1,6 +1,6 @@
 <template>
   <div>
-        <div class="phone-viewport">
+        <div>
         <md-list>
 <!--personal-->
             <md-list-item>
@@ -22,7 +22,7 @@
                 <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="github">
             </md-icon>
                 <span>
-                    <a href="https://github.com/maxma241" target="_blank">https://github.com/maxma241</a>
+                    <a :href="introduce.github" target="_blank">github.com/maxma241</a>
                 </span>
             </md-list-item>
 
@@ -37,12 +37,9 @@
             </md-list-item>
 
 <!--skill-->
-            <md-list-item>
-                <slot></slot>
-            </md-list-item>
-            
-            
+            <slot></slot>
         </md-list>
+        
         </div>
   </div>
 </template>
@@ -54,7 +51,8 @@
 </script>
 
 <style lang="scss">
-    .list-bg {
-        background-color: white;
-    }
+    .list-width {
+            display: flex;
+            justify-content: flex-end;
+        }
 </style>

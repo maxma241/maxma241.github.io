@@ -1,62 +1,75 @@
 <template>
   <div id="app">
-    <!--<md-layout md-gutter>
-       <md-layout md-flex md-flex-medium="33" md-hide-small>
-    md-flex-medium="33" <br>
-    md-hide-small
-  </md-layout>
-      <md-layout md-column md-gutter>
-        <md-layout md-flex="20"> <List :introduce="Data.introduce"></List></md-layout>
-      </md-layout>
+    <!--<div class="col-md-3">
+      <md-sidenav>
+      <md-whiteframe md-elevation="6">
+        <left-list :introduce="data.introduce" >
+          <skill :skills="data.skills" />
+        </left-list>
+      </md-whiteframe>
+      </md-sidenav>
+    </div>
+    <div class="col-md-9">
+      <md-card>
+        <md-card-header>
+          <h2>BackGround</h2>
+        </md-card-header>
+        <about :about="data.introduce.about" />
+      </md-card>
+    </div> -->
+      <div>
+        <md-toolbar>
+          <md-button class="md-icon-button nav-show" @click.native="toggleSidenav">
+            <md-icon>menu</md-icon>
+          </md-button>
+          <h1 class="md-title title">
+            Max Ma Resume
+          </h1>
+        </md-toolbar>
 
-      <md-layout md-column md-gutter>
-        <md-layout md-flex="600"><div style="background-color: black;">23123</div></md-layout>
-      </md-layout>
-    </md-layout>-->
-    <!--<md-layout md-gutter>
-      <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="20">
-        <List :introduce="Data.introduce"></List>
-        <div style="background-color: sandybrown;  width: 100%;">123</div>
-      </md-layout>
-      <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="20">
-        <div style="background-color: blue; height: 800px; width: 100%;">123</div>
-      </md-layout>
-       <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="20">
-        <div style="background-color: red; height: 800px; width: 100%;">123</div>
-      </md-layout>
-
-      <md-layout md-flex md-flex-medium="20" >
-        <div style="background-color: black; height: 800px; width: 100%;">123</div>
-      </md-layout>
-    </md-layout>-->
-
-    <md-layout md-gutter>
-      <md-layout>
-        <md-whiteframe md-elevation="6">
-          <List :introduce="Data.introduce" >
-            <Skill :skills="Data.skills"></Skill>
-          </List>
-        </md-whiteframe>
-      </md-layout>
-      
-    </md-layout>
+        <md-sidenav class="md-left" ref="sidenav">
+          <left-list :introduce="data.introduce" >
+            <skill :skills="data.skills" />
+          </left-list>
+        </md-sidenav>
+     
+        <md-card class="nav-margin">
+          <md-card-header>
+            <h3>BackGround</h3>
+          </md-card-header>
+          <about :about="data.introduce.about" />
+          <experiences :exps="data.experiences"/>
+          <educations :edu="data.educations"/>
+        </md-card>
+      </div>
   </div>
 </template>
 
 <script>
-import List from './components/List.vue';
-import Skill from './components/Skill.vue';
+import LeftList from './components/LeftList';
+import Skill from './components/Skill';
+import About from './components/About';
+import Experiences from './components/Experiences';
+import Educations from './components/Educations';
 import Data from './data';
 
 export default {
   components: {
-    List,
-    Skill
+    LeftList,
+    Skill,
+    About,
+    Experiences,
+    Educations
   },
   name: 'app',
   data () {
     return {
-      Data
+      data:Data
+    }
+  },
+  methods:{
+    toggleSidenav() {
+      this.$refs.sidenav.toggle();
     }
   }
 }
@@ -64,16 +77,19 @@ export default {
 
 <style lang="scss">
  @import '../node_modules/vue-material/dist/vue-material.css';
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-weight: normal;
 }
 
@@ -90,8 +106,45 @@ li {
 a {
   color: #42b983;
 }
+
+.page-content {
+    min-height: 100%;
+    max-height: 100%;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+}
+
 .md-list-item .md-list-item-container {
     min-height: 38px;
     justify-content: flex-end;
+}
+
+.head-layout {
+  width: 350px;
+}
+
+.md-sidenav.md-left .md-sidenav-content {
+    margin-top: 64px;
+}
+.nav-show {
+    display: block;
+}
+.nav-margin {
+  margin: 5px 10px;
+}
+
+@media (min-width:  992px) {
+  .md-sidenav.md-left .md-sidenav-content {
+    top: 0;
+    pointer-events: auto;
+    transform: translate3D(0,0,0);
+  }
+  .nav-margin {
+    margin-left: 310px;
+  }
+  .nav-show {
+    display: none;
+  }
 }
 </style>

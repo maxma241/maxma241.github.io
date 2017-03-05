@@ -1,11 +1,12 @@
 <template>
     <div>
         <md-list>
-        <md-list-item v-for="(s,i) in skills">
-            <div class="list-height">
-                {{s.name}}
+        <md-subheader>技能</md-subheader>
+        <md-list-item v-for="(s,i) in sks">
+            <div class="skill-list" >
+                <span class="span-margin">{{s.name}}</span>
                 <div class="skill-bar-wrap">
-                    <div class="skill-bar" :style="{width:`${s.value}%`, background: `rgb(${100-s.value+15}%, ${s.value+10}%, 0%)`}"></div>
+                    <div class="skill-bar" :style="{width:`${s.width}%`, backgroundColor: `rgb(${255-s.value+55}, ${s.value}, 0)`}"></div>
                 </div>
             </div>
         </md-list-item>
@@ -17,20 +18,17 @@
 <script>
     export default {
         props:['skills'],
+        data(){
+          return {
+              sks:[]
+          }  
+        },
         methods:{
-            // cssskills(i){
-            //     let bar = "skill-bar";
-            //     return bar;
-            //     let sValue = this.skills[i].value;
-            //     if (sValue >= 80) {
-            //         return bar + " skill-bar-80";
-            //     } else if (sValue >= 60) {
-            //         return bar + " skill-bar-60";
-            //     } else if (sValue >= 40) {
-            //         return bar + " skill-bar-40";
-            //     }
-            //     return bar + " skill-bar-20";
-            // }
+           
+        },
+        mounted(){
+           this.sks = this.skills.map(s=>({name:s.name, value:Math.floor((s.value/100)*255), width:s.value}) );
+           console.log(this.sks);
         }
     }
 </script>
@@ -49,5 +47,9 @@
                 border-radius: 25px 0 0 25px;
             }
         }
+    }
+    .span-margin {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 </style>
