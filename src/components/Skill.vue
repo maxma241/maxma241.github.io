@@ -1,9 +1,9 @@
 <template>
     <div>
-        <md-list>
-        <md-subheader>技能</md-subheader>
-        <md-list-item v-for="(s,i) in sks">
-            <div class="skill-list" >
+        <md-list class="list-width">
+        <md-subheader>{{title}}</md-subheader>
+        <md-list-item v-for="(s,i) in sks" class="skill-list">
+            <div>
                 <span class="span-margin">{{s.name}}</span>
                 <div class="skill-bar-wrap">
                     <div class="skill-bar" :style="{width:`${s.width}%`, backgroundColor: `rgb(${255-s.value+55}, ${s.value}, 0)`}"></div>
@@ -20,6 +20,7 @@
         props:['skills'],
         data(){
           return {
+              title:'技能',
               sks:[]
           }  
         },
@@ -34,22 +35,27 @@
 </script>
 
 <style lang="scss">
-    .md-list-item-container  {
-        .skill-bar-wrap {
+.md-list-item-container  {
+    .skill-bar-wrap {
+        height: 15px;
+        width: 90px;
+        min-height: 2px;
+        background: black;
+        display: inline-block;
+        border-radius: 25px;
+        .skill-bar {
             height: 15px;
-            width: 90px;
-            min-height: 2px;
-            background: black;
-            display: inline-block;
-            border-radius: 25px;
-            .skill-bar {
-                height: 15px;
-                border-radius: 25px 0 0 25px;
-            }
+            border-radius: 25px 0 0 25px;
         }
     }
-    .span-margin {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
+}
+.span-margin {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.md-list-item .md-list-item-holder {
+    min-height: 38px;
+    justify-content: flex-end;
+}
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <md-list class = "cus-md-list-header">
+    <md-list class = "cus-md-list-header ">
 <!--personal-->
         <md-toolbar>
             <md-list-item>
@@ -46,11 +46,10 @@
 </script>
 
 <style lang="scss">
-.list-width {
-    display: flex;
-    justify-content: flex-end;
-}
 .cus-md-list-header {
     padding-top: 0;
+}
+.md-list-item .md-list-item-container {
+    min-height: 38px;
 }
 </style>
