@@ -14,16 +14,6 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          postcss: [
-                    require( 'autoprefixer' )( {
-                        browsers: [ "last 5 version", "iOS >=8", "Safari >=8" ],
-                    }),
-                    require( 'cssnano' )( {
-                        zindex: false,
-                        calc: false,
-                        reduceIdents: false,
-                    }),
-                ],
           loaders: {
             // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
             // the "scss" and "sass" values for the lang attribute to the right configs here.
