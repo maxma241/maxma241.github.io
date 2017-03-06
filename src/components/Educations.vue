@@ -8,13 +8,12 @@
 
         <md-card-content class="about-inset">
             <div v-for="item in edu">
-                <h4>
-                    {{item.educatedAt}}, 
-                    {{item.title}}
-                </h4>
+                <h3>
+                    {{item.educatedAt}}, {{item.title}}
+                </h3>
                 <div class="edu-content">
                     <span>{{item.duration}}</span>
-                    <h5>{{item.description}}</h5>
+                    <h4>{{item.description}}</h4>
                 </div>
             </div>
         </md-card-content>

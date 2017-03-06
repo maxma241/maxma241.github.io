@@ -8,14 +8,14 @@
 
         <md-card-content class="about-inset">
             <div v-for="exp in exps">
-                <h4>
+                <h3>
                     {{exp.position}}, 
                     <a v-if="exp.companyUrl" :href="exp.companyUrl" target="_blank">{{exp.workAt}}</a>
                     <span v-else>{{exp.workAt}}</span>
-                </h4>
+                </h3>
                 <div class="exp-content">
                     <span>{{exp.duration}}</span>
-                    <h5>{{exp.description}}</h5>
+                    <h4>{{exp.description}}</h4>
                     <ul>
                         <li v-for="item in exp.highlights">{{item}}</li>
                     </ul>
@@ -37,6 +37,7 @@
 <style lang="scss">
 ul {
     list-style-type: circle;
+    font-size: 1.1em;
     li {
         display: list-item;
         margin-left: 30px;
