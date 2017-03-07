@@ -4,7 +4,7 @@
         <md-toolbar>
             <md-list-item>
                 <md-avatar class="md-large">
-                    <img src="http://i.imgur.com/lAA9UVJ.png" alt="People">
+                    <img src="http://i.imgur.com/R9HV81f.png" alt="People">
                 </md-avatar>
                 <span>{{introduce.cname}}<br/>({{introduce.ename}})</span>    
             </md-list-item>
