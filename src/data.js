@@ -6,7 +6,7 @@ const introduce = {
   email: 'marfi241@gmail.com',
   github: 'https://github.com/maxma241',
   phone: '請用信箱通知後在給您',
-  about:'對JavaScript很有興趣的開發者，熱衷和鑽研前後端新技術，喜歡與人討論新技術和code寫法，具有良好的學習能力。希望成為前端工程師(重前輕後)。職場上希望能學習及熟練更多新穎技術，熟練前端JavaScript Framework和開發工具，後端希望把node.js技能等級點高，讓自己的技術更扎實。'
+  about:'對JavaScript很有興趣的開發者，熱衷和鑽研前後端新技術，喜歡與人討論新技術和code，具有良好的學習能力。目前都會follow polo主持的線上讀書會。希望成為前端工程師(重前輕後)。職場上希望能學習及熟練更多新穎技術，熟練前端JavaScript Framework和開發工具，後端希望把node.js技能等級點高，讓自己的技術更扎實。'
 }
 
 const experiences = [
