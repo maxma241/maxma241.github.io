@@ -1,18 +1,10 @@
-# resume
+# resume 
+
+[page](https://maxma241.github.io/)
 
 > max.ma's vue resume
 
-## Build Setup
+use vue / vue-cli
 
-``` bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
 
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).

@@ -51,6 +51,13 @@ const educations = [
 
 const projects = [
   {
+    title: '個人簡歷',
+    meta: ['vue', 'vue-cli', 'vue-material', 'ES6', 'scss'],
+    description: '用了vue寫了個簡歷頁面',
+    url:'https://maxma241.github.io/',
+    repository: 'https://github.com/maxma241/maxma241.github.io'
+  },
+  {
     title: '為了下指令打卡',
     meta: ['node', 'selenium-webdriver', 'babel', 'ES6'],
     description: '前公司2017新制的關係，為了省時間打卡就做了這個',
