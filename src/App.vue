@@ -70,9 +70,9 @@ export default {
 <style lang="scss">
  @import '../node_modules/vue-material/dist/vue-material.css';
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    -moz-box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -101,8 +101,11 @@ ul {
     .main-content {
       padding-right: 8px;
       padding-bottom: 8px;
-      margin-top: 64px;
+      padding-top: 64px;
+      margin-top: 0px;
       z-index: 0;
+      height: 100vh;
+      overflow: auto;
   }
 }
 .sidenav-fixed {
