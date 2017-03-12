@@ -53,7 +53,7 @@
     margin-left: 5px;
     margin-right: 5px;
 }
-.md-list-item .md-list-item-holder {
+.md-list-item .md-list-item-container {
     min-height: 38px;
     justify-content: flex-end;
 }

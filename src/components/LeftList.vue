@@ -16,9 +16,7 @@
         </md-list-item>
 
         <md-list-item>
-        <md-icon>
-            <img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="github">
-        </md-icon>
+        <md-icon mdSrc="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" />
             <span>
                 <a :href="introduce.github" target="_blank">github.com/maxma241</a>
             </span>
