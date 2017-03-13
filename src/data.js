@@ -19,7 +19,8 @@ const experiences = [
     highlights: [
       '負責財富管理系統，使用Java Struts2, Spring',
       '幫助公司導入git版控，開了內部教育訓練課程',
-      '引導同事使用ES6'
+      '引導同事使用ES6',
+      '專案follow git flow 使用jenkins自動包版'
     ]
   },
   // {
@@ -53,7 +54,7 @@ const projects = [
   {
     title: '個人簡歷',
     meta: ['vue', 'vue-cli', 'vue-material', 'ES6', 'scss'],
-    description: '用了vue寫了個簡歷頁面',
+    description: '用了vue寫了個簡歷頁面，使用了vue material',
     url:'https://maxma241.github.io/',
     repository: 'https://github.com/maxma241/maxma241.github.io'
   },
