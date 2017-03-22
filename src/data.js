@@ -52,6 +52,13 @@ const educations = [
 
 const projects = [
   {
+    title: 'linebot dev.',
+    meta: ['koa', 'koa-router', 'mongoose', 'request', 'cheerio'],
+    description: '某天的下午心血來潮學個koa跟mongoose，先用了request + cheerio撈好樂迪國語點播排行存進mongoDB，接著用koa來get',
+    url:'https://maxmalinebot.herokuapp.com/songsRank/v1/list',
+    repository: 'https://github.com/maxma241/maxmalinebot'
+  },
+  {
     title: '個人簡歷',
     meta: ['vue', 'vue-cli', 'vue-material', 'ES6', 'scss'],
     description: '用了vue寫了個簡歷頁面，使用了vue material',
