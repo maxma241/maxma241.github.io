@@ -6,7 +6,7 @@ const introduce = {
   email: 'marfi241@gmail.com',
   github: 'https://github.com/maxma241',
   phone: '請用信箱通知後在給您',
-  about:'對JavaScript很有興趣的開發者，熱衷和鑽研前後端新技術，喜歡與人討論新技術和code，具有良好的學習能力。目前都會follow polo主持的線上讀書會。希望成為前端工程師(重前輕後)。職場上希望能學習及熟練更多新穎技術，熟練前端JavaScript Framework和開發工具，後端希望把node.js技能等級點高，讓自己的技術更扎實。'
+  about:'對JavaScript很有興趣的開發者，熱衷和鑽研前後端新技術，喜歡與人討論新技術和code，具有良好的學習能力。目前都會follow polo主持的線上讀書會。希望成為前端工程師(重前輕後)。職場上希望能學習及熟練更多新穎技術，熟練前端JS Framework和開發工具，後端希望把node.js技能等級點高，讓自己的技術更扎實。'
 }
 
 const experiences = [
@@ -18,7 +18,7 @@ const experiences = [
     description: '商智資訊提供了銀行金融服務解決方案，例如財富管理系統、行動理專APP、資產配置系統。',
     highlights: [
       '負責財富管理系統，使用Java Struts2, Spring',
-      '幫助公司導入git版控，開了內部教育訓練課程',
+      '幫助公司導入git版控，開了內部教育訓練課程 (<a href="https://www.slideshare.net/maxma98/git-73699918" target="_blank">slideshare</a>)',
       '引導同事使用ES6',
       '專案follow git flow 使用jenkins自動包版'
     ]
@@ -75,7 +75,7 @@ const projects = [
   {
     title: '綜藝節目-綜藝玩很大',
     meta: ['react'],
-    description: '會看這節目，為了方便就寫了一個簡單的page，一開始用傳統jQuery方式寫，後來新增一頁用React呈現的view',
+    description: '會看這節目，為了方便就寫了一個簡單的page，一開始用傳統jQuery方式寫，後來新增一頁用React呈現的view (天才衝衝衝的channel沒了，所以沒東西)',
     url:'http://maxma241.github.io/tvprogram/TVRE.html',
     repository: 'https://github.com/maxma241/tvprogram'
   },

@@ -23,7 +23,7 @@
         <div class="main-content">
           <md-card class="nav-margin">
             <md-card-header>
-              <h2>BackGround</h2>
+              <h2>Background</h2>
             </md-card-header>
             <about :about="data.introduce.about" />
             <experiences :exps="data.experiences" />

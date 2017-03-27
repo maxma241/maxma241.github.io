@@ -17,7 +17,7 @@
                     <span>{{exp.duration}}</span>
                     <h4>{{exp.description}}</h4>
                     <ul>
-                        <li v-for="item in exp.highlights">{{item}}</li>
+                        <li v-for="item in exp.highlights"><span v-html="item"></span></li>
                     </ul>
                 </div>
             </div>
