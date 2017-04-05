@@ -82,9 +82,9 @@ const projects = [
     repository: 'https://github.com/maxma241/tvprogram'
   },
   {
-    title: '碩論',
-    meta: ['Tomcat/Servlet', 'jQuery UI/mobile', 'Mashup', 'RESTful Service'],
-    description: '前端mashup，後端mashup。目的是節省手機流量與操作時間',
+    title: '碩論-State-Driven and Brick-Based Mobile Service Composition',
+    meta: ['Android', 'jQuery UI/mobile', 'Mashups', 'RESTful Service', 'Service Brick', 'Tomcat/Servlet'],
+    description: '提出前端mashup及後端mashup的方法。目的是節省手機流量與操作時間。提出Android-fragment-based Service Brick。[Composite Service Brick] <=> [Mediator] <=> [RESTful Service flow]。',
     url:'https://www.youtube.com/playlist?list=PLNksLR6Z4ynYreXMIco1Sqg17OzGU4rF9',
     repository: ''
   },
