@@ -101,10 +101,9 @@ ul {
     .main-content {
       padding-right: 8px;
       padding-bottom: 8px;
-      padding-top: 64px;
-      margin-top: 0px;
+      margin-top: 64px;
       z-index: 0;
-      height: 100vh;
+      height: calc(100vh - 64px);
       overflow: auto;
   }
 }
