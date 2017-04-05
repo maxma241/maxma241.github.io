@@ -6,7 +6,9 @@ const introduce = {
   email: 'marfi241@gmail.com',
   github: 'https://github.com/maxma241',
   phone: '請用信箱通知後在給您',
-  about:'對JavaScript很有興趣的開發者，熱衷和鑽研前後端新技術，喜歡與人討論新技術和code，具有良好的學習能力。目前都會follow polo主持的線上讀書會。希望成為前端工程師(重前輕後)。職場上希望能學習及熟練更多新穎技術，熟練前端JS Framework和開發工具，後端希望把node.js技能等級點高，讓自己的技術更扎實。'
+  about:`對JavaScript很有興趣的開發者，熱衷和鑽研前後端新技術，喜歡與人討論新技術和code，具有良好的學習能力。目前都會follow polo主持的<a href="https://github.com/onlinereadbook/office" target="_blank">線上讀書會</a>。
+  在職場上希望能學習及熟練更多新穎技術，像是前端JS Framework和HTML/CSS及後端Express/koa等NPM上常用的工具，讓自己的技術更扎實。
+  最近在玩Next/Nuxt.js，一個超好用的SSR工具(很多都幫你做掉了)，前者是React，後者是Vue。希望能找到寫React/Vue的工作。`
 }
 
 const experiences = [
@@ -97,15 +99,15 @@ const projects = [
 
 const skills = [
   { name: 'JavaScript', value:90 },
-  { name: 'HTML/CSS', value:75 },
+  { name: 'HTML/CSS', value:70 },
   { name: 'ES6', value:87 },
-  { name: 'Vue.js', value:67 },
+  { name: 'Vue.js', value:70 },
   { name: 'React.js', value: 60 },
-  { name: 'Node.js', value: 40},
+  { name: 'Node.js', value: 50},
   { name: 'Webpack', value: 80},
   { name: 'Git', value:90 },
   { name: 'Git/Github flow', value:87 },
-  { name: 'Gulp', value:70 }
+  { name: 'Gulp', value:60 }
 ]
 
 export default {

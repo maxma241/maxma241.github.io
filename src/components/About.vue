@@ -7,7 +7,7 @@
         </md-card-header>
         
         <md-card-content class="about-inset">
-            <h4>{{about}}</h4>
+            <h4 v-html="about"></h4>
         </md-card-content>
     </div>
 </template>
